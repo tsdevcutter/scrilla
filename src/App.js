@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import HomeScreen from "./pages/HomeScreen";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsnConditions from "./pages/TermsnConditions";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>              
              <Route path="/" element={<HomeScreen />}/>  
              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+             <Route path="/terms-conditions" element={<TermsnConditions />} />
           </Routes>
         </div>
      </Router>

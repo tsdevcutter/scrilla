@@ -7,7 +7,7 @@ function VideoDisplay() {
     <div className="section-area">
         <div className="container">
             <img src={tempBanner} className="img-banner" />
-            <div className="access-background enlarge-2 mt-5">
+            <div className="access-background curver pd30 enlarge-2 mt-5">
                 <div className="row">
                     <div className="col-md-8">
                         <div className="nav-left-part">

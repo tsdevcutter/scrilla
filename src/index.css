@@ -1,7 +1,7 @@
 :root { 
   --default-color: #088c4e;
   --accent-color: #d0e2db;
-  --second-color:#e2f83a;  
+  --second-color:#9cbeb1;  
   --white-color: #ffffff; 
   --light-gray-color: #f2f3f2;
   --gray-color: #d3d6d6;  
@@ -60,31 +60,35 @@ a.nav-tp-item {
     border-radius: 7px;
     font-weight: 400;
     transition: transform 1s ease; 
+    border: 0px;
 }
 .btn-position:hover {
     background-color: var(--accent-color);
     color: var(--default-color);
+    border: 0px;
 }
 .btn-position-alter {
     color: var(--white-color);
-    background-color: var(--accent-color);
+    background-color: var(--second-color);
     padding: 9px 20px;
     border-radius: 7px;
     font-weight: 400;
     transition: transform 1s ease; 
+    border: 0px;
 }
 .btn-position-alter:hover {
     background-color: var(--default-color);
-    color: var(--accent-color);
+    color: var(--second-color);
 }
 img.img-banner {
     width: 100%;
 }
 .access-background {
     background-color: var(--accent-color);
-    border-radius: 20px;
     max-height: 410px;
-    padding: 30px;
+}
+.access-background.curver {
+    border-radius: 20px;
 }
 h1, h2, h4, h5{
   color: var(--default-color);
@@ -110,6 +114,9 @@ h1, h2, h4, h5{
 }
 .boost3 {
     font-size: 50px;
+}
+.boost4 {
+    font-size: 35px;
 }
 
 img.logo-download-img {
@@ -163,4 +170,56 @@ img.logo-download-img {
     width: 60%;
     margin: auto;
     font-size: 20px;
+}
+.button-interaction {
+    padding-top: 30px;
+}
+.button-interaction button {
+    margin-right: 10px;
+}
+.strong {
+    font-weight: 600;
+}
+.strong2 {
+    font-weight: 800;
+}
+.pd30 {
+    padding: 30px;
+}
+ul.social-work {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+ul.social-work li a{
+    display: block;
+    padding: 3px;
+    color: var(--second-color);
+    font-size: 20px;
+}
+.foot-socials-box {
+    padding-top: 50px;
+}
+ul.menu-foot {
+    list-style: none;
+    padding: 0;
+    width: 160px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 0px;
+    height: 100%;
+    display: block;
+}
+.foot-navi-menu-box {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+ul.menu-foot li a {
+    display: block;
+    color: var(--default-color);
+    margin-top: 2px;
+    margin-bottom: 5px;
 }

@@ -1,8 +1,13 @@
 import React from 'react'
+import NavigationBar from '../components/NavigationBar'
+import Footer from '../components/Footer'
 
 function PrivacyPolicy() {
   return (
-    <div>PrivacyPolicy</div>
+    <div className="content-area">
+            <NavigationBar />
+            <Footer />
+        </div>
   )
 }
 

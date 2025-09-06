@@ -12,9 +12,9 @@ function NavigationBar() {
                 </div>  
                 <div className="navigation-figure">
                     <ul className="navigate-area">
-                        <li><Link to={'#'} className="nav-tp-item">Latest Finds</Link></li>
-                        <li><Link to={'#'} className="nav-tp-item">Store Finder</Link></li>
-                        <li><Link to={'#'} className="nav-tp-item">Contact Support</Link></li>
+                        <li><a href="/#latest-finds" className="nav-tp-item">Latest Finds</a></li>
+                        <li><a href="/#store-finder" className="nav-tp-item">Store Finder</a></li>
+                        <li><a href="/#contact-support" className="nav-tp-item">Contact Support</a></li>
                         <li><Link to={'#'} className="nav-bt btn-position">Download</Link></li>
                     </ul>
                 </div>
