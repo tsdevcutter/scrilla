@@ -5,8 +5,11 @@
   --white-color: #ffffff; 
   --light-gray-color: #f2f3f2;
   --gray-color: #d3d6d6;  
-  --black-color: #090909;	
+  --black-color: #1b1d1c;	
   --shadow-color: rgba(0, 0, 0, 0.2);
+}
+.colorblack {
+    color: var(--black-color);
 }
 
 body {
@@ -118,6 +121,9 @@ h1, h2, h4, h5{
 .boost4 {
     font-size: 35px;
 }
+.boost5 {
+    font-size: 27px;
+}
 
 img.logo-download-img {
     width: 270px;
@@ -222,4 +228,45 @@ ul.menu-foot li a {
     color: var(--default-color);
     margin-top: 2px;
     margin-bottom: 5px;
+}
+video.video-banner {
+    border-radius: 20px;
+    width: 100%;
+}
+.view-section {
+    padding: 10px;
+}
+
+
+/* 1. Reset the default list style and enable manual counting */
+.dash-part {
+  list-style: none; /* Hide the default '1.', '2.', '3.' */
+  counter-reset: dash-counter; /* Initialize the counter */
+  padding-left: 0; /* Remove default padding for clean alignment */
+}
+
+.dash-part li {
+  /* Ensure the custom marker is positioned correctly */
+  position: relative;
+  margin-bottom: 10px; /* Space between items */
+  padding-left: 25px; /* Make space for the custom marker */
+  counter-increment: dash-counter; /* Increment the counter for each <li> */
+}
+
+/* 2. Style the custom marker (the number and the dash) */
+.dash-part li::before {
+  content: counter(dash-counter) ' — '; /* Display the number and the long dash */
+  /* Apply your desired color to the number and dash */
+  color: var(--gray-color); /* Example: A blue color */
+  /* Position and style the marker */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+.list-item-hm {
+    margin-left: 40px;
+}
+.part-video {
+    padding: 15px;
 }

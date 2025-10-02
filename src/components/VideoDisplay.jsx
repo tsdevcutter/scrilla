@@ -6,7 +6,14 @@ function VideoDisplay() {
   return (
     <div className="section-area">
         <div className="container">
-            <img src={tempBanner} className="img-banner" />
+            <video autoPlay
+                loop
+                muted
+                playsInline
+                className="video-banner img-banner">
+                <source src="https://scrillarewards.co.za/assets/videos/scrilla-hero.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
             <div className="access-background curver pd30 enlarge-2 mt-5">
                 <div className="row">
                     <div className="col-md-8">
