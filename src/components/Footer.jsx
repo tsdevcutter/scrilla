@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import logoFoot from '../assets/logo-box.png';
+import logoFoot from '../assets/foot-logo.png';
+import appleLink from '../assets/appstore.png';
+import playsLink from '../assets/play-store.png';
+import TermsConditionsModal from './modal/TermsConditionsModal';
+import PrivacyPolicyModal from './modal/PrivacyPolicyModal';
 
 function Footer() {
+
+    const [showTermsCondition, setShowTermsCondition]                                   = useState(false);
+    const [showPrivacyPolicy, setShowPrivacyPolicy]                                     = useState(false);
   return (
     <div className="section-area">
         <div className="container">
@@ -14,26 +21,67 @@ function Footer() {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="foot-socials-box">
-                         <ul className="social-work">
-                            <li><Link to="#"><FaFacebookF /></Link> </li>
-                            <li><Link to="#"><FaLinkedinIn /></Link> </li>
-                            <li><Link to="#"><FaYoutube /></Link> </li>
-                            <li><Link to="#"><FaInstagram /></Link> </li>
+                    <div className="foot-menu-box">
+                        <h4>Cash-Back</h4>
+                         <ul className="list-foot-work">
+                            <li><a href="#how-it-works">How it works</a> </li>
+                            <li><a href="#store-finder">Participating Pharmacies</a> </li>
                          </ul>
-                         <div className="copy-content">
-                            Copyright Scrilla Rewards {new Date().getFullYear()}
-                         </div>
+                         
                     </div>
                 </div>
-                <div className="col-md-6">
-                    <div className="foot-navi-menu-box">
-                        <ul className="menu-foot">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-                            <li><Link to="/terms-conditions">Terms and Conditions</Link></li>
-                        </ul>
+                <div className="col-md-3">
+                    <div className="foot-menu-box">
+                         <h4>Join Us</h4>
+                         <ul className="list-foot-work">
+                            <li> </li>
+                            <li> </li>
+                         </ul>
+                         
                     </div>
+                </div>
+                <div className="col-md-4">
+                    <div className="foot-navi-menu-box foot-menu-box">
+                        <h4>Download the app</h4>
+                        <p>Scrilla is available on Google Play and App Store</p>
+                        <div className="row unrow">
+                            <div className="col-md-6">
+                                <Link to={"#"} target="_blank">
+                                  <img src={appleLink} className="logo-download-img" />
+                                </Link>
+                            </div>
+                            <div className="col-md-6">
+                                <Link to={"https://play.google.com/store/apps/details?id=com.ads.scrilla&hl=en"} target="_blank">
+                                  <img src={playsLink} className="logo-download-img" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-md-2">
+
+                </div>
+                <div className="col-md-10">
+                    <ul className="menu-flex-low">
+                        <li><button className="bottom-copy" onClick={() => setShowPrivacyPolicy(true)}>Privacy Policy</button></li>
+                        <li><button className="bottom-copy" onClick={() => setShowTermsCondition(true)}>Terms & Conditions</button></li>
+                        <li><div className="bottom-copy">Copyright Scrilla Rewards {new Date().getFullYear()}</div></li>
+                    </ul>
+
+                    {
+                        <TermsConditionsModal 
+                            showTermsCondition={showTermsCondition}
+                            setShowTermsCondition={setShowTermsCondition} />
+                    }
+
+                    {
+                        <PrivacyPolicyModal 
+                            showPrivacyPolicy={showPrivacyPolicy}
+                            setShowPrivacyPolicy={setShowPrivacyPolicy}
+                            />
+                    }
                 </div>
             </div>
         </div>

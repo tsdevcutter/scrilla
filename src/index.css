@@ -5,20 +5,24 @@
   --white-color: #ffffff; 
   --light-gray-color: #f2f3f2;
   --gray-color: #d3d6d6;  
-  --black-color: #1b1d1c;	
+  --black-color: #494949;	
   --shadow-color: rgba(0, 0, 0, 0.2);
 }
 .colorblack {
     color: var(--black-color);
 }
+.colorwhite {
+    color: var(--white-color);
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Archivo", sans-serif;
   color: var(--default-color);
+}
+a {
+    color: var(--default-color);
 }
 .space-bet {
     justify-content: space-between;
@@ -60,7 +64,7 @@ a.nav-tp-item {
     color: var(--white-color);
     background-color: var(--default-color);
     padding: 9px 20px;
-    border-radius: 7px;
+    border-radius: 20px;
     font-weight: 400;
     transition: transform 1s ease; 
     border: 0px;
@@ -88,7 +92,7 @@ img.img-banner {
 }
 .access-background {
     background-color: var(--accent-color);
-    max-height: 410px;
+   
 }
 .access-background.curver {
     border-radius: 20px;
@@ -114,9 +118,11 @@ h1, h2, h4, h5{
 }
 .boost2 {
     font-size: 70px;
+    font-weight: 800;
 }
 .boost3 {
     font-size: 50px;
+    font-weight: 800;
 }
 .boost4 {
     font-size: 35px;
@@ -126,19 +132,19 @@ h1, h2, h4, h5{
 }
 
 img.logo-download-img {
-    width: 270px;
-}
-.ball-play-nav {
-    padding: 25px;
+    width: 230px;
 }
 
+.app-downloading {
+    display: flex;
+}
 .place-link-left {
     text-align: right;
-  
+  padding: 10px;
 }
 .place-link-right {
     text-align: left;
-   
+   padding: 10px;
 }
 .quesion-point-view {
   font-size: 17px;
@@ -178,7 +184,11 @@ img.logo-download-img {
     font-size: 20px;
 }
 .button-interaction {
-    padding-top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
 }
 .button-interaction button {
     margin-right: 10px;
@@ -192,25 +202,15 @@ img.logo-download-img {
 .pd30 {
     padding: 30px;
 }
-ul.social-work {
-    list-style: none;
-    padding: 0px;
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
+.foot-menu-box {
+    padding-top: 10px;
 }
-ul.social-work li a{
-    display: block;
-    padding: 3px;
-    color: var(--second-color);
-    font-size: 20px;
-}
-.foot-socials-box {
-    padding-top: 50px;
-}
-ul.menu-foot {
+.foot-menu-box ul{
     list-style: none;
     padding: 0;
+}
+
+ul.menu-foot {    
     width: 160px;
     font-size: 14px;
     font-weight: 700;
@@ -218,16 +218,16 @@ ul.menu-foot {
     height: 100%;
     display: block;
 }
-.foot-navi-menu-box {
-    display: flex;
-    justify-content: end;
-    position: relative;
-}
+
 ul.menu-foot li a {
     display: block;
     color: var(--default-color);
     margin-top: 2px;
     margin-bottom: 5px;
+}
+.foot-menu-box h4 {
+    font-size: 15px;
+    font-weight: 800;
 }
 video.video-banner {
     border-radius: 20px;
@@ -256,9 +256,7 @@ video.video-banner {
 /* 2. Style the custom marker (the number and the dash) */
 .dash-part li::before {
   content: counter(dash-counter) ' — '; /* Display the number and the long dash */
-  /* Apply your desired color to the number and dash */
   color: var(--gray-color); /* Example: A blue color */
-  /* Position and style the marker */
   position: absolute;
   left: 0;
   top: 0;
@@ -266,7 +264,152 @@ video.video-banner {
 }
 .list-item-hm {
     margin-left: 40px;
+    font-weight: 300;
 }
 .part-video {
     padding: 15px;
+}
+.modal.fade.show {
+    background: #00000061;
+}
+.modal.show {
+    display: block;
+}
+.frm-edit {
+    text-align: left;
+}
+.form-control{
+    background-color: var(--accent-color);
+}
+.hite2 {
+    min-height: 200px !important;
+}
+.mobil-menu-show {
+    display: none;
+}
+.foot-logo-box img.img-logo {
+    width: 100%;
+}
+.foot-navi-menu-box.foot-menu-box img.logo-download-img {
+    width: 140px;
+}
+
+ul.menu-flex-low {
+    display: flex;
+    padding: 0px;
+    list-style: none;
+    justify-content: space-between;
+}
+ul.menu-flex-low li .bottom-copy 
+ {
+    color: var(--default);
+    background: transparent;
+    border: none;
+    font-size: 12px;
+}
+.modal-dialog.modal-big {
+    width: 70% !important;
+    max-width: 70%;
+}
+.terms-service-edit {
+    height: 500px;
+    overflow-y: scroll;
+    font-size: 11px;
+}
+img.dog-show {
+    width: 110%;
+}
+@media (max-width: 1130px) {
+    img.dog-show {
+        width: 400px;
+    }
+    .boost1 {
+        font-size: 80px;
+    }
+    .boost2 {
+        font-size: 60px;
+    }
+    .boost3 {
+        font-size: 40px;
+    }
+    .boost4 {
+        font-size: 36px;
+    }
+    .boost5 {
+        font-size: 26px;
+    }
+}
+@media (max-width: 1000px) {
+    img.dog-show {
+        width: 340px;
+    }
+}
+@media (max-width: 768px) {
+    .mobil-menu-show {
+        display: block;
+            float: right;
+        margin-top: -50px;
+        font-size: 20px;
+        border: 0px;
+        padding: 5px 9px 8px 11px;
+        border-radius: 3px;
+    }
+    .boost1 {
+        font-size: 70px;
+    }
+    .boost2 {
+        font-size: 50px;
+    }
+    .boost3 {
+        font-size: 35px;
+    }
+    .boost4 {
+        font-size: 29px;
+    }
+    .boost5 {
+        font-size: 20px;
+    }
+
+    .nav-row {
+        background: var(--gray-color);
+        width: 100%;
+    }
+    .nav-row .d-flex.space-bet {
+        display: block !important;
+    }
+    .nav-row .d-flex.space-bet ul.navigate-area {
+        display: block;
+    }
+    .section-area {
+        padding: 30px 8px;
+    }
+    .app-downloading {
+        display: block;
+    }
+    img.logo-download-img
+    {
+        width: 180px;
+    }
+    .place-link-left {
+        text-align: left;
+    }
+    img.dog-show {
+        width: 200px;
+    }
+    ul.navigate-area.showfalse {
+        display: none !important;
+    }
+    ul.menu-flex-low {
+        display: block;
+        padding: 5px;
+        margin-top: 10px;
+    }
+    .bottom-copy {
+        padding: 5px;
+    }
+    .modal-dialog.modal-big 
+    {
+        width: 96% !important;
+        max-width: 95%;
+    }
 }

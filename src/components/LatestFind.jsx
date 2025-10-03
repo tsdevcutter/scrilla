@@ -2,7 +2,7 @@ import React from 'react'
 
 function LatestFind() {
   return (
-    <div id="latest-finds" className="section-area">
+    <div id="how-it-works" className="section-area">
         <div className="container">
           <div className="row">
             <div className="col-md-4">
