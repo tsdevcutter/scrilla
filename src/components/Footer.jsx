@@ -65,7 +65,11 @@ function Footer() {
                 </div>
                 <div className="col-md-10">
                     <ul className="menu-flex-low">
-                        <li><button className="bottom-copy" onClick={() => setShowPrivacyPolicy(true)}>Privacy Policy</button></li>
+                        <li><Link 
+                                className="bottom-copy" 
+                                to={"https://www.iubenda.com/privacy-policy/31609770#additional-info-on-collection-and-processing"}
+                                target="_blank">Privacy Policy</Link>
+                        </li>
                         <li><button className="bottom-copy" onClick={() => setShowTermsCondition(true)}>Terms & Conditions</button></li>
                         <li><div className="bottom-copy">Copyright Scrilla Rewards {new Date().getFullYear()}</div></li>
                     </ul>

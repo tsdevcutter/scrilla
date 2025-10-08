@@ -319,6 +319,11 @@ ul.menu-flex-low li .bottom-copy
 img.dog-show {
     width: 110%;
 }
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 @media (max-width: 1130px) {
     img.dog-show {
         width: 400px;
@@ -347,7 +352,7 @@ img.dog-show {
 @media (max-width: 768px) {
     .mobil-menu-show {
         display: block;
-            float: right;
+        float: right;
         margin-top: -50px;
         font-size: 20px;
         border: 0px;
