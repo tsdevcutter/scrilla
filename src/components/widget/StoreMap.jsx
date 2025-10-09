@@ -1,5 +1,5 @@
 import React from "react";
-import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, Marker, InfoWindow } from "@react-google-maps/api";
 
 /*
 const brandMapStyle = [
@@ -41,40 +41,40 @@ const stores = [
 ];
 
 export default function StoreMap() {
+  
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: ""
+  });
+
   const [selected, setSelected] = React.useState(null);
+  
+  if (!isLoaded) return <div>Loading map...</div>;
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyCDD_nH8QTXPmlzWPqWkhCN2QjnAFXUEKo">
-      <GoogleMap mapContainerStyle={containerStyle} 
-        center={center} 
-        zoom={13}
-        >
-        {
-            window.google && stores.map((store) => (
-            <Marker
-                key={store.id}
-                position={store.position}
-                onClick={() => setSelected(store)}
-                icon={{
-                url: "https://scrillarewards.co.za/assets/images/icon1.png",
-                scaledSize: new window.google.maps.Size(40, 40),
-                }}
-            />
-            ))
-        }
+     <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
+      {stores.map((store) => (
+        <Marker
+          key={store.id}
+          position={store.position}
+          onClick={() => setSelected(store)}
+          icon={{
+            url: "https://scrillarewards.co.za/assets/images/icon1.png",
+            scaledSize: new window.google.maps.Size(40, 40),
+          }}
+        />
+      ))}
 
-        {selected && (
-          <InfoWindow
-            position={selected.position}
-            onCloseClick={() => setSelected(null)}
-          >
-            <div>
-              <h4>{selected.name}</h4>
-              <p>{selected.address}</p>
-            </div>
-          </InfoWindow>
-        )}
-      </GoogleMap>
-    </LoadScript>
+      {selected && (
+        <InfoWindow
+          position={selected.position}
+          onCloseClick={() => setSelected(null)}
+        >
+          <div>
+            <h4>{selected.name}</h4>
+            <p>{selected.address}</p>
+          </div>
+        </InfoWindow>
+      )}
+    </GoogleMap>
   );
 }

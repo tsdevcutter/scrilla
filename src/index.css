@@ -363,13 +363,13 @@ img.dog-show {
         font-size: 70px;
     }
     .boost2 {
-        font-size: 50px;
+        font-size: 30px;
     }
     .boost3 {
-        font-size: 35px;
+        font-size: 30px;
     }
     .boost4 {
-        font-size: 29px;
+        font-size: 25px;
     }
     .boost5 {
         font-size: 20px;
@@ -416,5 +416,14 @@ img.dog-show {
     {
         width: 96% !important;
         max-width: 95%;
+    }
+}
+@media (max-width: 480px){
+    .part-video.outer-second-video {
+        text-align: center;
+    }
+    video.video-banner.mb-second-video {
+        width: 70%;
+        margin: auto;
     }
 }
