@@ -70,7 +70,13 @@ function Footer() {
                                 to={"https://www.iubenda.com/privacy-policy/31609770#additional-info-on-collection-and-processing"}
                                 target="_blank">Privacy Policy</Link>
                         </li>
-                        <li><button className="bottom-copy" onClick={() => setShowTermsCondition(true)}>Terms & Conditions</button></li>
+                        <li>
+                            <Link 
+                                className="bottom-copy" 
+                                to={"https://www.iubenda.com/terms-and-conditions/31609770"}>
+                                Terms & Conditions
+                            </Link>
+                        </li>
                         <li><div className="bottom-copy">Copyright Scrilla Rewards {new Date().getFullYear()}</div></li>
                     </ul>
 
