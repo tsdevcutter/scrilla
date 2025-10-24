@@ -6,6 +6,7 @@ import StoreFinder from '../components/StoreFinder'
 import DownloadScrilla from '../components/DownloadScrilla'
 import ContactSupport from '../components/ContactSupport'
 import Footer from '../components/Footer'
+import AboutArea from '../components/AboutArea'
 
 function HomeScreen() {
   return (
@@ -13,6 +14,7 @@ function HomeScreen() {
         <NavigationBar />
         <VideoDisplay />
         <LatestFind />
+        <AboutArea />
         <StoreFinder />
         <DownloadScrilla />
         <ContactSupport />

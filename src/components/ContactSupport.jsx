@@ -11,8 +11,8 @@ function ContactSupport() {
             <div className="row">
                 <div className="col-md-9 strong">
                     <h2 className="boost3 strong2">Contact Support </h2>
-                    <h2 className="boost3 colorblack">Having issues with Scrilla? </h2>
-                    <p className="colorwhite">Just whistle and we're here to help.</p>
+                    <h2 className="boost3 colorblack">Need a Hand? </h2>
+                    <p className="colorwhite">Give us a shout, we're waiting to help.</p>
                 </div>
                 <div className="col-md-3">
                     <div className="button-interaction">

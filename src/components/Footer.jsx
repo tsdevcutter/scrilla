@@ -20,7 +20,7 @@ function Footer() {
                         <img src={logoFoot} className="img-logo" />
                     </div>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-5">
                     <div className="foot-menu-box">
                         <h4>Cash-Back</h4>
                          <ul className="list-foot-work">
@@ -30,17 +30,7 @@ function Footer() {
                          
                     </div>
                 </div>
-                <div className="col-md-3">
-                    <div className="foot-menu-box">
-                         <h4>Join Us</h4>
-                         <ul className="list-foot-work">
-                            <li> </li>
-                            <li> </li>
-                         </ul>
-                         
-                    </div>
-                </div>
-                <div className="col-md-4">
+                <div className="col-md-5">
                     <div className="foot-navi-menu-box foot-menu-box">
                         <h4>Download the app</h4>
                         <p>Scrilla is available on Google Play and App Store</p>
@@ -68,12 +58,14 @@ function Footer() {
                         <li><Link 
                                 className="bottom-copy" 
                                 to={"https://www.iubenda.com/privacy-policy/31609770#additional-info-on-collection-and-processing"}
-                                target="_blank">Privacy Policy</Link>
+                                target="_blank">
+                                    Privacy Policy</Link>
                         </li>
                         <li>
                             <Link 
                                 className="bottom-copy" 
-                                to={"https://www.iubenda.com/terms-and-conditions/31609770"}>
+                                to={"https://www.iubenda.com/terms-and-conditions/31609770"}
+                                target="_blank">
                                 Terms & Conditions
                             </Link>
                         </li>

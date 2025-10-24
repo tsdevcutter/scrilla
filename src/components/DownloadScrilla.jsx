@@ -14,7 +14,7 @@ function DownloadScrilla() {
                 <div className="row">
                     <div className="col-md-7">
                         <h2 className="title-pt">Download Scrilla</h2>
-                        <h2 className="boost3 colorblack">Don't miss a chance to get Cash-Back with Scrilla</h2>
+                        <h2 className="boost3 colorblack">Join Scrilla today and get Fetched.</h2>
                         <div className="app-downloading">
                             <div className="place-link-left">
                                 <Link to={"#"} target="_blank">

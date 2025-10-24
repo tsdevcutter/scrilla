@@ -2,14 +2,53 @@ import React from 'react'
 import StoreMap from './widget/StoreMap'
 
 function StoreFinder() {
+  const stores = [
+  { 
+    id: 1,
+    name: "The Local Choice Pharmacy Quenets",
+    address: "The Local Choice Pharmacy Quenets -72 High St, Worcester Central, Worcester, 6850",
+    position: { lat: -33.644061, lng: 19.4419402 }
+  },
+  {
+    id: 2,
+    name: "The Local Choice Pharmacy Quenets Langerug",
+    address: "The Local Choice Pharmacy Quenets Langerug- Shop 8, Drostdy Centre, Henry Gird St, Hospital Hill, Worcester, 6850",
+    position: { lat: -33.6381557, lng: 19.4279878 }
+  }
+];
+
   return (
     <div id="store-finder" className="section-area">
         <div className="container">
-          <h2 className="title-pt">Participating Pharmacies</h2>
-          <h2 className="boost5">Where can I shop for Cash-Back</h2>
-          <p>Discover store where you can stop with Scrilla and get your Cash-Back.</p>
+          <h2 className="title-pt">Participating Stores</h2>
+          <p>Discover a Scrilla participating pharmacy near you and get Fetched!</p>
            <div className="map-container">
-            <StoreMap />
+              <div className="row">
+                <div className="col-md-3">
+                    <div className="list-stores">
+                        {
+                          stores.length > 0 && (
+                            <div className="list-stores--inner">
+                              {
+                                stores.map((store, index) => {
+                                  return <div className="card card-part" key={index}>
+                                            <div className="card-image"></div> 
+                                            <div className="card-body text-center">
+                                                <h5>{store.name}</h5>
+                                            </div>      
+                                             
+                                          </div>
+                                })
+                              }
+                            </div>
+                          )
+                        }
+                    </div>
+                </div>
+                <div className="col-md-9">
+                  <StoreMap stores={stores} />
+                </div>
+              </div>
            </div>
         </div>
     </div>

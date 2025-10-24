@@ -25,22 +25,9 @@ const center = {
   lng: 19.4504893
 };
 
-const stores = [
-  { 
-    id: 1,
-    name: "The Local Choice Pharmacy Quenets",
-    address: "The Local Choice Pharmacy Quenets -72 High St, Worcester Central, Worcester, 6850",
-    position: { lat: -33.644061, lng: 19.4419402 }
-  },
-  {
-    id: 2,
-    name: "The Local Choice Pharmacy Quenets Langerug",
-    address: "The Local Choice Pharmacy Quenets Langerug- Shop 8, Drostdy Centre, Henry Gird St, Hospital Hill, Worcester, 6850",
-    position: { lat: -33.6381557, lng: 19.4279878 }
-  }
-];
 
-export default function StoreMap() {
+
+export default function StoreMap({stores}) {
   
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyCDD_nH8QTXPmlzWPqWkhCN2QjnAFXUEKo"

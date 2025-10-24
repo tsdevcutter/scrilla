@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import mainLogo from './../assets/scrilla-logo.png';
+import mainLogoWhite from './../assets/scrilla-logo-white.png';
 import { FaBars } from 'react-icons/fa';
 function NavigationBar() {
     const [dropMenu, setDroppedMenu]                    = useState(true);
@@ -30,7 +31,7 @@ function NavigationBar() {
         return () => {
         window.removeEventListener('resize', checkWidth);
         };
-  }, []);
+    }, []);
 
   return (
    <div className="nav-row">
@@ -38,7 +39,7 @@ function NavigationBar() {
             className="container">
             <div className="d-flex space-bet">
                 <div className="logo-box">
-                <img src={mainLogo} className="top-logo" />
+                <img src={mainLogoWhite} className="top-logo" />
                 </div>  
                 <div className="navigation-figure">
                     <button className="mobil-menu-show"
@@ -46,10 +47,10 @@ function NavigationBar() {
                         <FaBars />
                     </button>
                     <ul className={"navigate-area show" + dropMenu}>
-                        {/* <li><a href="/#latest-finds" className="nav-tp-item">Our Founders</a></li> */}
+                         <li><a href="/#about-us" className="nav-tp-item">About Us</a></li>
                         <li><a href="/#store-finder" className="nav-tp-item">Store Finder</a></li>
                         <li><a href="/#contact-support" className="nav-tp-item">Contact Support</a></li>
-                        <li><a href={'/#download'} className="nav-bt btn-position">Download</a></li>
+                        <li><a href={'/#download'} className="nav-tp-item">Download</a></li>
                     </ul>
                 </div>
             </div>

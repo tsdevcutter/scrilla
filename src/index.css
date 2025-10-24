@@ -46,20 +46,35 @@ img.top-logo {
 }
 .nav-row {
     padding: 30px 5px;
+    background-color: var(--default-color);
 }
 a.nav-tp-item {
     font-size: 18px;
-    color: var(--black-color);
+    color: var(--white-color);
     font-weight: 600;
 }
-
-
 /**** END NAV ******/
-
 .section-area {
     padding: 50px 30px;
 }
-
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--accent-color);
+    border-bottom-color: var(--default-color);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
 .btn-position {
     color: var(--white-color);
     background-color: var(--default-color);
@@ -130,9 +145,14 @@ h1, h2, h4, h5{
 .boost5 {
     font-size: 27px;
 }
-
+.italic {
+    font-style: italic;
+}
 img.logo-download-img {
     width: 230px;
+}
+.txtsize2 {
+    font-size: 18px;
 }
 
 .app-downloading {
@@ -323,6 +343,12 @@ img.dog-show {
     border-radius: 10px;
     overflow: hidden;
 }
+.card-part {
+    background: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 
 @media (max-width: 1130px) {
     img.dog-show {
@@ -352,12 +378,15 @@ img.dog-show {
 @media (max-width: 768px) {
     .mobil-menu-show {
         display: block;
-        float: right;
+        float: left;
         margin-top: -50px;
         font-size: 20px;
         border: 0px;
         padding: 5px 9px 8px 11px;
         border-radius: 3px;
+    }
+    .logo-box {
+        text-align: right;
     }
     .boost1 {
         font-size: 70px;
@@ -376,7 +405,6 @@ img.dog-show {
     }
 
     .nav-row {
-        background: var(--gray-color);
         width: 100%;
     }
     .nav-row .d-flex.space-bet {
