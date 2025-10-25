@@ -18,7 +18,7 @@ function DownloadScrilla() {
                         <div className="app-downloading">
                             <div className="place-link-left">
                                 <Link to={"#"} target="_blank">
-                                  <img src={appleLink} className="logo-download-img" />
+                                  <img src={appleLink} className="logo-download-img opa" />
                                 </Link>
                           </div>
                           <div className="place-link-right">

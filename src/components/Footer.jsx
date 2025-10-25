@@ -37,7 +37,7 @@ function Footer() {
                         <div className="row unrow">
                             <div className="col-md-6">
                                 <Link to={"#"} target="_blank">
-                                  <img src={appleLink} className="logo-download-img" />
+                                  <img src={appleLink} className="logo-download-img opa" />
                                 </Link>
                             </div>
                             <div className="col-md-6">

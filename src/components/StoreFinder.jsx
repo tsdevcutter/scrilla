@@ -7,13 +7,15 @@ function StoreFinder() {
     id: 1,
     name: "The Local Choice Pharmacy Quenets",
     address: "The Local Choice Pharmacy Quenets -72 High St, Worcester Central, Worcester, 6850",
-    position: { lat: -33.644061, lng: 19.4419402 }
+    position: { lat: -33.644061, lng: 19.4419402 },
+    logo : "https://scrillarewards.co.za/assets/images/TLC-quenet.png"
   },
   {
     id: 2,
     name: "The Local Choice Pharmacy Quenets Langerug",
     address: "The Local Choice Pharmacy Quenets Langerug- Shop 8, Drostdy Centre, Henry Gird St, Hospital Hill, Worcester, 6850",
-    position: { lat: -33.6381557, lng: 19.4279878 }
+    position: { lat: -33.6381557, lng: 19.4279878 },
+    logo : "https://scrillarewards.co.za/assets/images/TLC-quenet-lan.png"
   }
 ];
 
@@ -31,10 +33,13 @@ function StoreFinder() {
                             <div className="list-stores--inner">
                               {
                                 stores.map((store, index) => {
-                                  return <div className="card card-part" key={index}>
-                                            <div className="card-image"></div> 
-                                            <div className="card-body text-center">
-                                                <h5>{store.name}</h5>
+                                  return <div className="card-part" key={index}>
+                                            <div className="card-image">
+                                              <img src={store.logo} className="logo-sr" /> 
+                                            </div> 
+                                            <div className="card-body-part">
+                                                
+                                                <p>{store.address}</p>
                                             </div>      
                                              
                                           </div>
